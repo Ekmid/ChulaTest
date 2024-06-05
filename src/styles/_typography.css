@@ -4,5 +4,6 @@ body {
     line-height: var(--line-height-base);
     color: var(--primary-color);
     background: var(--background-color);
+    font-weight: var(--font-weight-base);
   }
   
