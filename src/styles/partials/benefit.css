@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
 
-    
+
 
     .benefit__info {
         display: flex;
@@ -50,24 +50,6 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 1100px) {
-    .benefit {
-
-        flex-direction: column;
-        margin: 24px 16px 72px 16px;
-        font-size: var(--font-size-phone-p);
-    }
-
-    .benefit__title {
-        font-size: var(--font-size-phone-h1);
-        font-size: 36px;
-    }
-
-    .benefit__btn {
-        margin: 48px 0;
-    }
-}
-
 .modal {
     color: white;
     display: none;
@@ -87,11 +69,11 @@
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 40%;
 }
 
 .close {
-    color: black;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -102,4 +84,27 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+@media (min-width: 320px) and (max-width: 1100px) {
+    .benefit {
+
+        flex-direction: column;
+        margin: 24px 16px 72px 16px;
+        font-size: var(--font-size-phone-p);
+    }
+
+    .benefit__title {
+        font-size: var(--font-size-phone-h1);
+        font-size: 36px;
+    }
+
+    .benefit__btn {
+        margin: 48px 0;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
 }

@@ -41,7 +41,7 @@
     cursor: pointer;
     user-select: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     .promo__checkbox {
         display: none;
@@ -185,11 +185,6 @@
     .promo__list {
         flex-direction: column;
         width: 100%;
-    }
-
-    .promo__approval {
-        display: flex;
-        justify-content: flex-start;
     }
 
     .promo__input {
