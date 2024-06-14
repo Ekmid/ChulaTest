@@ -4,7 +4,8 @@
         <h2 class="promo__title">Несколько шагов <br> <span>и 1 ТБ — ваш</span></h2>
 
         <label class="promo__phone" for="phone-number">Номер телефона</label>
-        <input class="promo__input" type="text" id="phone-number" placeholder="+7 (XXX) XXX-XX-XX">
+        <input class="promo__input" type="text" id="phone-number" placeholder="+7 (XXX) XXX-XX-XX"
+            data-mask="+7 (___) ___-__-__" maxlength="18">
 
         <section class="promo__approval">
 
@@ -17,11 +18,16 @@
             </p>
         </section>
 
-        <button class="promo__btn">Выслать промокод</button>
+        <button class="promo__btn" id="send-button">Выслать промокод</button>
 
-        <span class="promo__message">
+        <span class="promo__message" id="success-message" style="display: none;">
             <img src="/approved.svg" alt="approved" />
             Промокод выслан на ваш номер
+        </span>
+
+        <span class="promo__message" id="error-message" style="display: none;">
+            <img src="/error.svg" alt="error" />
+            Неправильный номер телефона или не отмечено согласие
         </span>
     </article>
 

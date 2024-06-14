@@ -13,6 +13,9 @@
     --font-family-h2: "Oswald", sans-serif;
     --font-family: "Roboto", sans-serif;
     --font-size-base: 20px;
+    --font-size-phone-p: 18px;
+    --font-size-phone-h1: 36px;
+    --font-size-phone-h2: 18px;
     --font-weight-base: 400;
     --line-height-base: 30px;
   }

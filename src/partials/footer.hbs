@@ -67,6 +67,8 @@
             <p>© Tele2 Россия, 2021</p>
         </a>
 
+        <p class="" onclick="scrollToTop()">Вернуться наверх</p>
+
         <a href="https://chulakov.ru" class="footer__chulakov">
             <p>Сделано в Студии Олега Чулакова</p>
             <svg width="139" height="16" viewBox="0 0 139 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,5 +79,14 @@
         </a>
 
     </section>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 
 </footer>

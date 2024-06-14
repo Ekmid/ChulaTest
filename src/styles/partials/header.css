@@ -1,0 +1,213 @@
+.header {
+    height: 76px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #383d4a;
+
+    .header__logo {
+        height: 33px;
+        padding-left: 32px;
+    }
+
+    .header__btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 32px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        color: var(--primary-color);
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+
+        .header__marker path {
+            transition: fill 0.3s ease;
+        }
+
+        &:hover {
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+
+            .header__marker path {
+                fill: var(--secondary-color);
+            }
+        }
+
+        .header__location {
+            padding-left: 8px;
+            font-size: var(--font-size-base);
+            font-weight: 400;
+        }
+    }
+
+    
+
+    .header__btns {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #confirm-Region {
+        padding: 0 1em;
+        background: none;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        height: 40px;
+        width: auto;
+        display: none;
+        position: relative;
+        border: 2px solid #1F2229;
+        font-size: 16px;
+        font-weight: 700;
+        transition: all 0.4s ease;
+
+        &:hover {
+            background: #000;
+            color: white;
+        }
+    }
+
+    #change-Region {
+        all: unset;
+        cursor: pointer;
+        display: none;
+        position: relative;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom: 2px solid black;
+            font-weight: 900;
+        }
+    }
+
+}
+
+#city-dialog {
+    border: none;
+    overflow: none;
+    margin: 0 162px;
+    padding: 144px 0;
+    top: 77px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s;
+    background: #1c1f25;
+    overflow: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.header__modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+
+    text-align: center;
+
+    h2 {
+        margin-bottom: 64px;
+        font-family: var(--font-family-h2);
+        color: white;
+    }
+}
+
+#city-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 88px;
+    row-gap: 24px;
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.header__region {
+    color: #fff;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.header__popup {
+    all: unset;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    top: 18%;
+    left: 86%;
+    font-size: 18px;
+    width: 300px;
+    height: 120px;
+    border-radius: 4px;
+    color: black;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 320px) and (max-width:1100px) {
+
+    .header__logo {
+        width: 48px;
+    }
+
+    .header__marker {
+        width: 13.5px;
+    }
+
+    .header__location {
+        font-size: 18px;
+    }
+
+    .header__popup {
+        top: 18%;
+        left: 53%;
+    }
+
+    #city-dialog {
+        font-size: 18px;
+        margin: 0 0;
+        padding: 0 0;
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .header__modal {
+        width: 100%;
+        margin: 0 18px;
+    }
+    
+    #city-list {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 88px;
+        column-gap: 24px;
+        list-style-type: none;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+}

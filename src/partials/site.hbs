@@ -2,10 +2,17 @@
 
     <hgroup class="site__info">
         <h2 class="site__title">Заходите на сайт Tele2</h2>
-        <p class="site__text">Перейдите в магазин, оформите тариф «Мой онлайн+» и на страничке активации введите ваш промокод. Готово! </p>
-        <button class="site__btn">Оформить тариф</button>
+        <p class="site__text">Перейдите в магазин, оформите тариф «Мой онлайн+» и на страничке активации введите ваш
+            промокод. Готово! </p>
+        <button class="site__btn" onclick="redirectToOtherSite()">Оформить тариф</button>
     </hgroup>
 
-    <img src="/phone.png" alt="phone site">
+    <img class="site__img" src="/phone.png" alt="phone site">
+
+    <script>
+        function redirectToOtherSite() {
+            window.location.href = 'https://rostov.tele2.ru';
+        }
+    </script>
 
 </section>
